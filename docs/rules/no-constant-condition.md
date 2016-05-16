@@ -62,3 +62,25 @@ do{
 
 var result = x !== 0 ? a : b;
 ```
+
+## Options
+
+### checkLoops
+
+Set to `true` by default. Setting this option to `false` allows constant expressions in loops.
+
+Examples of **correct** code for when `checkLoops` is `false`:
+
+```js
+while (true) {
+    doSomething();
+};
+
+for (;true;) {
+    doSomething();
+};
+
+do {
+    doSomething();
+} while (true)
+```
